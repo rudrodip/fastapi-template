@@ -1,0 +1,33 @@
+datasource db {
+  provider = "postgres"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider             = "prisma-client-py"
+}
+
+model User {
+  id    String     @id @default(cuid())
+  email String  @unique
+  name  String?
+  image String?
+
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+
+  posts Post[]
+}
+
+
+model Post {
+  id        String     @id @default(cuid())
+  title     String
+  content   String?
+
+  author    User?   @relation(fields: [author_email], references: [email])
+  author_email String? @map(name: "author_email")
+
+  createdAt     DateTime  @default(now()) @map(name: "created_at")
+  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+}
