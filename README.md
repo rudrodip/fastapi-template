@@ -11,11 +11,12 @@ Features:
 
 Todo:
 
+- [x] Poetry setup
 - [x] Server initialization
 - [x] Prisma ORM setup
 - [x] DB initialization and migration
 - [x] User registration & login using Google OAuth2 (with JWT)
-- [ ] Docker container setup
+- [x] Docker container setup
 - [x] Postgres setup
 - [ ] MySQL setup
 - [ ] SQLite setup
@@ -23,4 +24,4 @@ Todo:
 - [ ] Tests
 - [ ] Deployment
 - [x] Swagger UI
-- [x] Documentation
+- [ ] Documentation
