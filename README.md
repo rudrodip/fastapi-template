@@ -17,7 +17,7 @@ Todo:
 - [x] DB initialization and migration
 - [x] User registration & login using Google OAuth2 (with JWT)
 - [x] Docker container setup
-- [ ] Docker for development
+- [x] Docker for development
 - [x] Postgres setup
 - [ ] MySQL setup
 - [ ] SQLite setup
