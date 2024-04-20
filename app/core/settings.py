@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     ALLOWED_ORIGINS: list[str] = ["http://localhost:3000"]
     AUTH_SECRET: str = os.getenv("AUTH_SECRET")
     DATABASE_URL: str = os.getenv("DATABASE_URL")
+    POSTGRES_USER: str = os.getenv("POSTGRES_USER")
+    POSTGRES_PASSWORD: str = os.getenv("POSTGRES_PASSWORD")
 
     class Config:
         env_file = ".env"
